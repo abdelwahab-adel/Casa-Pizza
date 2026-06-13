@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>العروض الحصرية — دار الزعفران</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=El+Messiri:wght@400;500;600;700&family=Marhey:wght@500;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23C9A24E'/%3E%3Ctext x='32' y='42' font-family='serif' font-size='34' fill='%23100E0B' text-anchor='middle' font-weight='700'%3Eز%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<div class="utility">
+  <div class="wrap">
+    <div class="info">
+      <span>الشيخ زايد، الجيزة، مصر</span>
+      <span>010 1234 5678</span>
+      <span>12 ظهراً – 1 صباحاً</span>
+    </div>
+    <div class="info">
+      <a href="reservations.html">احجز طاولتك</a>
+      <a href="qr.html">قائمة QR</a>
+    </div>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c0 5-4 6-4 10s4 8 4 8 4-4 4-8-4-5-4-10z"/></svg></span>
+      <span>دار الزعفران<small>EST. 2014 · EGYPT</small></span>
+    </a>
+    <nav class="menu">
+      <a href="index.html">الرئيسية</a>
+      <a href="menu.html">القائمة</a>
+      <a href="offers.html" class="active">العروض</a>
+      <a href="reservations.html">الحجوزات</a>
+      <a href="location.html">الموقع</a>
+      <a href="qr.html">QR Menu</a>
+      <a href="contact.html">التواصل</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="lang-pill" type="button">EN</button>
+      <a class="btn btn-gold btn-sm" href="reservations.html">احجز الآن<span class="arrow">←</span></a>
+    </div>
+    <button class="burger" aria-label="القائمة"><span></span></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="crumb">الرئيسية · العروض</div>
+    <h1>عروض دار الزعفران</h1>
+    <p>استمتع بأفضل النكهات الشرقية مع عروضنا الحصرية المصممة لتناسب لمات العيلة وأوقات العمل في فرع الشيخ زايد.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="offers-grid" id="offers-grid" style="display:grid;grid-template-columns:repeat(auto-fill, minmax(320px, 1fr));gap:30px">
+      <!-- Offers will be injected here -->
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <div class="brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c0 5-4 6-4 10s4 8 4 8 4-4 4-8-4-5-4-10z"/></svg></span><span>دار الزعفران<small>EST. 2014 · EGYPT</small></span></div>
+        <p class="about">مطبخ شرق أوسطي معاصر في الشيخ زايد، مصر. نقدّم وصفات منزلية بأياد محترفة منذ 2014.</p>
+      </div>
+      <div>
+        <h5>تصفّح</h5>
+        <ul>
+          <li><a href="menu.html">القائمة</a></li>
+          <li><a href="offers.html">العروض</a></li>
+          <li><a href="reservations.html">الحجوزات</a></li>
+          <li><a href="qr.html">قائمة QR</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>اتصل بنا</h5>
+        <ul>
+          <li>الشيخ زايد، الجيزة، مصر</li>
+          <li>010 1234 5678</li>
+          <li>info@alzaafaran.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <div>© 2014 — 2026 دار الزعفران.</div>
+      <div>جميع الحقوق محفوظة.</div>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+  const D = window.SAFFRON_DATA;
+  const grid = document.getElementById("offers-grid");
+  
+  grid.innerHTML = D.offers.map(o => `
+    <article class="dish" style="background:#fff;border:1px solid var(--line);border-radius:var(--radius-m);overflow:hidden;display:flex;flex-direction:column">
+      <div class="ph" style="aspect-ratio:16/9;overflow:hidden"><img src="${o.img}" alt="${o.title}" style="width:100%;height:100%;object-fit:cover"></div>
+      <div class="body" style="padding:24px;flex:1;display:flex;flex-direction:column">
+        <span class="tag new" style="margin-bottom:12px;display:inline-block">خصم ${o.discount}%</span>
+        <h3 class="h3">${o.title}</h3>
+        <p style="margin-top:12px;color:var(--muted);font-size:14.5px">${o.desc}</p>
+        <div style="margin-top:auto;padding-top:20px">
+          <div style="padding:12px;background:var(--paper);border-radius:8px;text-align:center">
+            <small style="display:block;color:var(--muted);margin-bottom:4px">كود الخصم</small>
+            <strong style="font-family:var(--font-num);font-size:24px;color:var(--saffron)">${o.code}</strong>
+          </div>
+          <p style="margin-top:16px;font-size:12px;color:var(--muted-2)">* ${o.terms}</p>
+        </div>
+      </div>
+    </article>
+  `).join("");
+</script>
+</body>
+</html>

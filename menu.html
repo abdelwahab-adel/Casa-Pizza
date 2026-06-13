@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>القائمة — كاسا بيتزا</title>
+<meta name="description" content="القائمة الموسمية الكاملة لكاسا بيتزا: مقبلات، سلطات، أطباق رئيسية، مشاوي، مشروبات، وحلويات.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=El+Messiri:wght@400;500;600;700&family=Marhey:wght@500;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23C9A24E'/%3E%3Ctext x='32' y='42' font-family='serif' font-size='34' fill='%23100E0B' text-anchor='middle' font-weight='700'%3Eز%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<div class="utility">
+  <div class="wrap">
+    <div class="info">
+      <span>التجمع الخامس، القاهرة</span>
+      <span>010 6830 0432</span>
+      <span>11 صباحًا – 2 صباحًا</span>
+    </div>
+    <div class="info">
+      <a href="reservations.html">احجز طاولتك</a>
+      <a href="qr.html">قائمة QR</a>
+    </div>
+  </div>
+</div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c0 5-4 6-4 10s4 8 4 8 4-4 4-8-4-5-4-10z"/></svg></span>
+      <span>كاسا بيتزا<small>EST. 2018 · القاهرة</small></span>
+    </a>
+    <nav class="menu">
+      <a href="index.html">الرئيسية</a>
+      <a href="menu.html" class="active">القائمة</a>
+      <a href="pizza.html" class="pz">🍕 بيتزا</a>
+      <a href="offers.html">العروض</a>
+      <a href="reservations.html">الحجوزات</a>
+      <a href="location.html">الموقع</a>
+      <a href="qr.html">QR Menu</a>
+      <a href="contact.html">التواصل</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="lang-pill" type="button">EN</button>
+      <a class="btn btn-gold btn-sm" href="reservations.html">احجز الآن<span class="arrow">←</span></a>
+    </div>
+    <button class="burger" aria-label="القائمة"><span></span></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="crumb">الرئيسية · القائمة</div>
+    <h1>قائمة الطعام الموسمية</h1>
+    <p>26 صنف في ستة أقسام + 8 أنواع بيتزا إيطالية أصيلة = 34 خيار لذيذ. كل حاجة بتتحضر طازجة يومياً، متاح للجلوس أو التيك أواي أو التوصيل.</p>
+  </div>
+</section>
+
+<div class="menu-toolbar">
+  <div class="wrap">
+    <div class="cats" id="cats"></div>
+    <div class="search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input id="q" type="search" placeholder="ابحث عن طبق، مكوّن، أو نكهة…" />
+    </div>
+  </div>
+</div>
+
+<main id="menu-body"></main>
+
+<section class="section" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="center js-reveal">
+      <span class="eyebrow center">الأسئلة الشائعة</span>
+      <h2 class="display-2" style="margin-top:14px">عن القائمة والمكوّنات</h2>
+    </div>
+    <div class="faq" id="faq" style="max-width:780px;margin:32px auto 0"></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <div class="brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c0 5-4 6-4 10s4 8 4 8 4-4 4-8-4-5-4-10z"/></svg></span><span>كاسا بيتزا<small>EST. 2018 · القاهرة</small></span></div>
+        <p class="about">بيتزا إيطالية حقيقية في التجمع الخامس، القاهرة. منذ 2018.. </p>
+      </div>
+      <div>
+        <h5>تصفّح</h5>
+        <ul>
+          <li><a href="menu.html">القائمة</a></li>
+          <li><a href="offers.html">العروض</a></li>
+          <li><a href="reservations.html">الحجوزات</a></li>
+          <li><a href="qr.html">قائمة QR</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>اتصل بنا</h5>
+        <ul>
+          <li>طريق الأمير تركي الأول<br>التجمع الخامس، القاهرة</li>
+          <li>010 6830 0432</li>
+          <li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e496819781969285908d8b8a97a480859685889e8585828596858aca9785">[email&#160;protected]</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>ساعات العمل</h5>
+        <ul>
+          <li>الأحد – الخميس: 12م – 12ص</li>
+          <li>الجمعة – السبت: 12م – 1ص</li>
+          <li>المطبخ يغلق قبل ساعة من الإغلاق</li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <div>© 2018 — 2026 كاسا بيتزا.</div>
+      <div>س.ت 12345678</div>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/cart.js"></script>
+<script>
+  const D = window.SAFFRON_DATA;
+  const catsEl = document.getElementById("cats");
+  const bodyEl = document.getElementById("menu-body");
+  const q = document.getElementById("q");
+  let active = "all", query = "";
+
+  // Pizza sizes shorthand for display (use minimum price)
+  function pizzaMinPrice(pz){
+    return Math.min(...Object.values(pz.prices));
+  }
+
+  function counts(){
+    const c = {all: D.items.length + D.pizza.types.length};
+    D.cats.forEach(cat => c[cat.id] = D.items.filter(i => i.cat===cat.id).length);
+    c["pizza"] = D.pizza.types.length;
+    return c;
+  }
+
+  function renderCats(){
+    const c = counts();
+    const pizzaCat = { id:"pizza", name:"🍕 البيتزا" };
+    const allCats = D.cats.concat([pizzaCat]);
+    catsEl.innerHTML =
+      `<button class="cat ${active==="all"?"active":""}" data-id="all">كل القائمة <span class="count">${c.all}</span></button>` +
+      allCats.map(cat => `<button class="cat ${active===cat.id?"active":""}" data-id="${cat.id}">${cat.name} <span class="count">${c[cat.id]}</span></button>`).join("");
+    catsEl.querySelectorAll(".cat").forEach(b => b.addEventListener("click", () => {
+      active = b.dataset.id; renderCats(); renderBody();
+      document.querySelector(".menu-toolbar").scrollIntoView({behavior:"smooth",block:"start"});
+    }));
+  }
+
+  function renderPizzaSection(){
+    const pz = D.pizza;
+    const tagMap = {veg:"نباتي",hot:"حار",new:"جديد"};
+    const filteredTypes = pz.types.filter(p =>
+      !query ||
+      p.name.toLowerCase().includes(query) ||
+      p.desc.toLowerCase().includes(query)
+    );
+    if(!filteredTypes.length) return "";
+    return `
+      <section class="section menu-section" id="pizza">
+        <div class="wrap">
+          <span class="eyebrow">🍕 البيتزا</span>
+          <h2 class="display-2" style="margin-top:10px">البيتزا على الحطب</h2>
+          <p class="lead">8 أنواع، 4 أحجام (صغير / وسط / كبير / عائلي)، 7 إضافات، وميزة نصفين مختلفين. اضغط "أضف للسلة" لاختيار الحجم والتخصيص.</p>
+          <div class="menu-list">
+            ${filteredTypes.map(p => {
+              const minP = pizzaMinPrice(p);
+              const tag = p.tag ? `<span class="tag ${p.tag}">${tagMap[p.tag]||p.tag}</span>` : "";
+              return `
+              <article class="menu-row" id="pizza-${p.id}">
+                <div class="ph"><img src="${p.img}" alt="${p.name}" loading="lazy"></div>
+                <div>
+                  <div class="name">
+                    <h4>${p.emoji} ${p.name}</h4>
+                    <span class="tags">${tag}</span>
+                  </div>
+                  <p>${p.desc}</p>
+                  <small style="color:var(--muted);font-size:12px">
+                    S: ${p.prices.S} · M: ${p.prices.M} · L: ${p.prices.L} · Family: ${p.prices.F} ${pz.currency}
+                  </small>
+                </div>
+                <div class="menu-row-end">
+                  <div class="price">${minP}<small>${pz.currency}</small></div>
+                  <button class="btn btn-gold btn-sm add-pizza-to-cart" type="button" data-pizza-id="${p.id}" aria-label="أضف ${p.name} للسلة">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+                    أضف للسلة
+                  </button>
+                </div>
+              </article>`;
+            }).join("")}
+          </div>
+        </div>
+      </section>`;
+  }
+
+  function renderBody(){
+    const list = D.items.filter(i => (active==="all" || i.cat===active) && (
+      !query ||
+      i.name.toLowerCase().includes(query) ||
+      i.desc.toLowerCase().includes(query)
+    ));
+
+    let html = "";
+
+    if(active === "pizza"){
+      html = renderPizzaSection() || `<section class="section"><div class="wrap center"><p style="color:var(--muted)">لم نعثر على أطباق مطابقة لبحثك.</p></div></section>`;
+    } else {
+      const groups = active==="all" ? D.cats : D.cats.filter(c => c.id===active);
+      html = groups.map(cat => {
+        const subset = list.filter(i => i.cat===cat.id);
+        if(!subset.length) return "";
+        return `
+          <section class="section menu-section" id="${cat.id}">
+            <div class="wrap">
+              <span class="eyebrow">${cat.name}</span>
+              <h2 class="display-2" style="margin-top:10px">${cat.name}</h2>
+              <p class="lead">${cat.desc}</p>
+              <div class="menu-list">
+                ${subset.map(i => `
+                  <article class="menu-row" id="item-${i.id}">
+                    <div class="ph"><img src="${i.img}" alt="${i.name}" loading="lazy"></div>
+                    <div>
+                      <div class="name">
+                        <h4>${i.name}</h4>
+                        <span class="tags">${(i.tags||[]).map(t => `<span class="tag ${t}">${({hot:"حار",veg:"نباتي",new:"جديد"})[t]||t}</span>`).join("")}</span>
+                      </div>
+                      <p>${i.desc}</p>
+                      <small style="color:var(--muted);font-size:12px">★ ${i.rating} · ${i.reviews} تقييم</small>
+                    </div>
+                    <div class="menu-row-end">
+                      <div class="price">${i.price}<small>ر.س</small></div>
+                      <button class="btn btn-gold btn-sm add-to-cart" type="button" data-item-id="${i.id}" aria-label="أضف ${i.name} للسلة">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+                        أضف
+                      </button>
+                    </div>
+                  </article>`).join("")}
+              </div>
+            </div>
+          </section>`;
+      }).join("");
+
+      // Add pizza section at the end when showing "all"
+      if(active === "all"){
+        html += renderPizzaSection();
+      }
+
+      if(!html.trim()){
+        html = `<section class="section"><div class="wrap center"><p style="color:var(--muted)">لم نعثر على أطباق مطابقة لبحثك.</p></div></section>`;
+      }
+    }
+
+    bodyEl.innerHTML = html;
+  }
+
+  q.addEventListener("input", (e) => {
+    query = e.target.value.trim().toLowerCase();
+    renderBody();
+  });
+
+  renderCats();
+  renderBody();
+
+  // Add to cart via event delegation (menu items)
+  bodyEl.addEventListener('click', function(e){
+    // Regular menu items
+    const btn = e.target.closest('.add-to-cart');
+    if(btn){
+      const itemId = parseInt(btn.dataset.itemId);
+      if(window.SaffronCart && window.SaffronCart.addMenu){
+        window.SaffronCart.addMenu(itemId);
+        btn.classList.add('added');
+        const orig = btn.innerHTML;
+        btn.innerHTML = '✓ أُضيف';
+        setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('added'); }, 1200);
+      }
+      return;
+    }
+    // Pizza items — open customizer modal
+    const pzBtn = e.target.closest('.add-pizza-to-cart');
+    if(pzBtn){
+      const pizzaId = pzBtn.dataset.pizzaId;
+      if(window.SaffronCart && window.SaffronCart.openPizza){
+        window.SaffronCart.openPizza(pizzaId);
+      }
+    }
+  });
+
+  // FAQ
+  const faq = document.getElementById("faq");
+  faq.innerHTML = D.faq.map(f => `<details><summary>${f.q}</summary><p>${f.a}</p></details>`).join("");
+</script>
+</body>
+</html>

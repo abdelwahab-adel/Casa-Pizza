@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#100E0B">
+<title>قائمة QR — كاسا بيتزا</title>
+<meta name="description" content="مولّد أكواد QR للقائمة الرقمية لمطعم كاسا بيتزا: كود لكل طاولة، تتبع المسح، وتحميل بصيغة PNG / SVG.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=El+Messiri:wght@400;500;600;700&family=Marhey:wght@500;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23C9A24E'/%3E%3Ctext x='32' y='42' font-family='serif' font-size='34' fill='%23100E0B' text-anchor='middle' font-weight='700'%3Eز%3C/text%3E%3C/svg%3E">
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+</head>
+<body>
+
+<div class="utility"><div class="wrap"><div class="info"><span>التجمع الخامس، القاهرة</span><span>010 6830 0432</span></div><div class="info"><a href="reservations.html">احجز طاولتك</a></div></div></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c0 5-4 6-4 10s4 8 4 8 4-4 4-8-4-5-4-10z"/></svg></span><span>كاسا بيتزا<small>EST. 2018 · القاهرة</small></span></a>
+    <nav class="menu">
+      <a href="index.html">الرئيسية</a>
+      <a href="menu.html">القائمة</a>
+      <a href="pizza.html" class="pz">🍕 بيتزا</a>
+      <a href="offers.html">العروض</a>
+      <a href="reservations.html">الحجوزات</a>
+      <a href="location.html">الموقع</a>
+      <a href="qr.html" class="active">QR Menu</a>
+      <a href="contact.html">التواصل</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="lang-pill" type="button">EN</button>
+      <a class="btn btn-gold btn-sm" href="reservations.html">احجز الآن<span class="arrow">←</span></a>
+    </div>
+    <button class="burger" aria-label="القائمة"><span></span></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="crumb">الرئيسية · قائمة QR</div>
+    <h1>قائمة QR — لكل طاولة كودها</h1>
+    <p>كل طاولة في المطعم لها كود QR مستقل يفتح القائمة الرقمية المحدّثة. حدّث القائمة في لحظات دون إعادة طباعة الأكواد، وتابع عدد المسحات لكل طاولة.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="qr-grid">
+      <!-- Builder -->
+      <div class="qr-builder js-reveal">
+        <span class="eyebrow">مولّد QR</span>
+        <h2 style="margin-top:10px;font-size:24px">أنشئ كوداً جديداً</h2>
+        <p style="color:var(--muted);font-size:14px;margin-top:6px">يُحدَّث المعاينة تلقائياً عند تغيير أي حقل. كل كود يحمل رمز الطاولة في عنوانه.</p>
+
+        <div class="field" style="margin-top:18px"><label>رمز الطاولة</label><input id="t-id" type="text" value="T-09" placeholder="مثال: T-09"></div>
+        <div class="field" style="margin-top:14px"><label>وصف الطاولة</label><input id="t-label" type="text" value="طاولة جديدة — جانب الحديقة"></div>
+        <div class="row">
+          <div class="field"><label>اللغة الافتراضية</label>
+            <select id="t-lang">
+              <option value="ar">العربية</option>
+              <option value="en">English</option>
+            </select>
+          </div>
+          <div class="field"><label>قسم القائمة المرتبط</label>
+            <select id="t-cat">
+              <option value="all">القائمة الكاملة</option>
+              <option value="mezze">المقبلات</option>
+              <option value="main">الأطباق الرئيسية</option>
+              <option value="grill">المشاوي</option>
+              <option value="drinks">المشروبات</option>
+              <option value="sweets">الحلويات</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="actions" style="margin-top:22px;display:flex;gap:10px;flex-wrap:wrap">
+          <button class="btn btn-gold btn-sm" id="dl-png">تحميل PNG<span class="arrow">←</span></button>
+          <button class="btn btn-ghost btn-sm" id="dl-svg">تحميل SVG</button>
+          <button class="btn btn-ghost btn-sm" id="copy-link">انسخ الرابط</button>
+          <button class="btn btn-ghost btn-sm" onclick="window.print()">طباعة البطاقة</button>
+        </div>
+
+        <div style="margin-top:24px;padding:16px;background:var(--paper);border-radius:12px;border:1px dashed var(--line)">
+          <div class="hint" style="margin-bottom:6px">رابط القائمة المُنشأ:</div>
+          <code id="link-out" style="font-family:var(--font-num);font-size:14px;color:var(--burgundy);word-break:break-all">—</code>
+        </div>
+      </div>
+
+      <!-- Preview -->
+      <div class="qr-preview js-reveal">
+        <div style="font-size:11px;letter-spacing:.22em;color:var(--muted);text-transform:uppercase;margin-bottom:14px">معاينة البطاقة</div>
+        <div class="qr-card">
+          <div class="brand-mini">
+            <span style="width:28px;height:28px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#E0B968,#B0883A);display:inline-grid;place-items:center;color:#100E0B"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="16" height="16"><path d="M12 3c0 5-4 6-4 10s4 8 4 8 4-4 4-8-4-5-4-10z"/></svg></span>
+            كاسا بيتزا
+          </div>
+          <div class="qr-box"><div id="qr-canvas" style="width:100%;height:100%;display:grid;place-items:center"></div></div>
+          <div class="qr-label">امسح الكود لتصفح القائمة</div>
+          <div class="table-no" id="t-id-preview">T-09</div>
+          <div style="font-size:12.5px;color:var(--muted);margin-top:4px" id="t-label-preview">طاولة جديدة — جانب الحديقة</div>
+        </div>
+        <p class="hint" style="margin-top:16px;text-align:center;max-width:300px">القائمة محدثة لحظياً — أي تعديل من لوحة الإدارة يظهر لجميع الضيوف فوراً دون إعادة طباعة الكود.</p>
+      </div>
+    </div>
+
+    <!-- Existing tables -->
+    <div style="margin-top:80px">
+      <div style="display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap">
+        <div>
+          <span class="eyebrow">الطاولات المسجّلة</span>
+          <h2 class="display-2" style="margin-top:10px;font-size:32px">8 طاولات نشطة</h2>
+          <p class="lead" style="margin-top:8px">إجمالي 1,313 عملية مسح خلال آخر 30 يوماً</p>
+        </div>
+        <button class="btn btn-ghost btn-sm">تصدير الكل (ZIP)</button>
+      </div>
+
+      <div class="qr-list" id="qr-tiles"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div><div class="brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c0 5-4 6-4 10s4 8 4 8 4-4 4-8-4-5-4-10z"/></svg></span><span>كاسا بيتزا<small>EST. 2018 · القاهرة</small></span></div>
+        <p class="about">بيتزا إيطالية حقيقية في التجمع الخامس، القاهرة. منذ 2018..</p>
+      </div>
+      <div><h5>تصفّح</h5><ul><li><a href="menu.html">القائمة</a></li><li><a href="offers.html">العروض</a></li><li><a href="reservations.html">الحجوزات</a></li><li><a href="admin.html">لوحة الإدارة</a></li></ul></div>
+      <div><h5>اتصل بنا</h5><ul><li>طريق الأمير تركي الأول، الرياض</li><li>010 6830 0432</li><li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="710314021403071005181e1f0231151003101d0b1010171003101f5f0210">[email&#160;protected]</a></li></ul></div>
+      <div><h5>ساعات العمل</h5><ul><li>الأحد – الخميس: 12م – 12ص</li><li>الجمعة – السبت: 12م – 1ص</li></ul></div>
+    </div>
+    <div class="legal"><div>© 2018 — 2026 كاسا بيتزا.</div><div>س.ت 12345678</div></div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/cart.js"></script>
+<script>
+const tId = document.getElementById("t-id");
+const tLabel = document.getElementById("t-label");
+const tLang = document.getElementById("t-lang");
+const tCat = document.getElementById("t-cat");
+const linkOut = document.getElementById("link-out");
+const canvasBox = document.getElementById("qr-canvas");
+const previewId = document.getElementById("t-id-preview");
+const previewLabel = document.getElementById("t-label-preview");
+
+function buildUrl(){
+  const base = "https://daralzaafaran.sa/menu";
+  const p = new URLSearchParams({ t: tId.value || "T-00", lang: tLang.value, cat: tCat.value });
+  return base + "?" + p.toString();
+}
+let lastQR;
+function render(){
+  const url = buildUrl();
+  linkOut.textContent = url;
+  previewId.textContent = tId.value || "T-00";
+  previewLabel.textContent = tLabel.value || "—";
+  const qr = qrcode(0, "M");
+  qr.addData(url);
+  qr.make();
+  lastQR = qr;
+  // 6px module, padded
+  canvasBox.innerHTML = qr.createSvgTag({ scalable:true, cellSize:6, margin:8 });
+  canvasBox.querySelector("svg").style.cssText = "width:100%;height:100%;display:block;background:#fff";
+}
+[tId, tLabel, tLang, tCat].forEach(el => el.addEventListener("input", render));
+render();
+
+document.getElementById("dl-png").addEventListener("click", () => {
+  const svg = canvasBox.querySelector("svg");
+  if(!svg) return;
+  const xml = new XMLSerializer().serializeToString(svg);
+  const blob = new Blob([xml], {type:"image/svg+xml"});
+  const url = URL.createObjectURL(blob);
+  const img = new Image();
+  img.onload = () => {
+    const c = document.createElement("canvas");
+    c.width = 720; c.height = 720;
+    const ctx = c.getContext("2d");
+    ctx.fillStyle = "#fff"; ctx.fillRect(0,0,720,720);
+    ctx.drawImage(img, 0,0, 720, 720);
+    c.toBlob(b => {
+      const a = document.createElement("a");
+      a.href = URL.createObjectURL(b);
+      a.download = `qr-${tId.value || "table"}.png`;
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+  };
+  img.src = url;
+  window.toast && window.toast("جارٍ تحضير الـ PNG...");
+});
+
+document.getElementById("dl-svg").addEventListener("click", () => {
+  const svg = canvasBox.querySelector("svg");
+  if(!svg) return;
+  const blob = new Blob([new XMLSerializer().serializeToString(svg)], {type:"image/svg+xml"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `qr-${tId.value || "table"}.svg`;
+  a.click();
+});
+
+document.getElementById("copy-link").addEventListener("click", () => {
+  navigator.clipboard?.writeText(buildUrl()).then(()=> window.toast && window.toast("تم نسخ رابط القائمة"));
+});
+
+// Existing tables — render small QR tiles for each
+const grid = document.getElementById("qr-tiles");
+const tables = window.SAFFRON_DATA.tables;
+grid.innerHTML = tables.map(t => {
+  const qr = qrcode(0, "M");
+  qr.addData(`https://daralzaafaran.sa/menu?t=${t.id}&lang=ar&cat=all`);
+  qr.make();
+  return `<div class="qr-tile">
+    <div class="mini">${qr.createSvgTag({ scalable:true, cellSize:4, margin:4 })}</div>
+    <div class="lbl">${t.label}</div>
+    <div class="scans">${t.scans}<small style="font-family:var(--font-body);font-size:11px;color:var(--muted);margin-inline-start:4px">مسحة هذا الشهر</small></div>
+  </div>`;
+}).join("");
+// shrink the inner svgs
+grid.querySelectorAll(".mini svg").forEach(s => s.style.cssText = "width:90%;height:90%;display:block;background:#fff;margin:auto");
+</script>
+</body>
+</html>

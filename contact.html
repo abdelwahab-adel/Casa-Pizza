@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>التواصل — كاسا بيتزا مصر</title>
+<meta name="description" content="تواصل مع كاسا بيتزا: 010 6830 0432 — 3 شارع البنوك، التجمع الخامس، القاهرة الجديدة.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=El+Messiri:wght@400;500;600;700&family=Marhey:wght@500;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<div class="utility"><div class="wrap"><div class="info" id="c-util-info"></div><div class="info"><a href="pizza.html">🍕 اطلب بيتزا</a></div></div></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="mark">🍕</span><span>كاسا بيتزا<small>EST. 2018 · القاهرة</small></span></a>
+    <nav class="menu">
+      <a href="index.html">الرئيسية</a>
+      <a href="menu.html">القائمة</a>
+      <a href="pizza.html" class="pz">🍕 بيتزا</a>
+      <a href="offers.html">العروض</a>
+      <a href="reservations.html">الحجوزات</a>
+      <a href="location.html">الموقع</a>
+      <a href="qr.html">QR Menu</a>
+      <a href="contact.html" class="active">التواصل</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="lang-pill" type="button">EN</button>
+      <a class="btn btn-gold btn-sm" href="pizza.html">اطلب بيتزا<span class="arrow">←</span></a>
+    </div>
+    <button class="burger" aria-label="القائمة"><span></span></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="crumb">الرئيسية · التواصل</div>
+    <h1>تواصل معنا</h1>
+    <p>سؤال، شكوى، اقتراح، أو بس عايز تقول إن البيتزا كانت تحفة؟ احنا هنا.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start" class="loc-grid">
+
+      <!-- Contact form -->
+      <div>
+        <span class="eyebrow">ابعت رسالة</span>
+        <h2 class="display-2" style="margin-top:14px">هنرد عليك<br>خلال ساعتين.</h2>
+        <form class="contact-form js-fake-form" style="margin-top:32px" data-msg="✅ وصلتنا رسالتك! هنرد عليك قريباً.">
+          <div class="field"><label>الاسم الكريم</label><input type="text" required placeholder="اسمك هنا"></div>
+          <div class="field"><label>رقم الهاتف</label><input type="tel" required placeholder="010 XXXX XXXX"></div>
+          <div class="field"><label>البريد الإلكتروني</label><input type="email" placeholder="you@example.com"></div>
+          <div class="field"><label>الموضوع</label>
+            <select>
+              <option value="">اختر الموضوع</option>
+              <option>استفسار عن القائمة</option>
+              <option>شكوى أو ملاحظة</option>
+              <option>طلب فعالية أو حفلة</option>
+              <option>التوصيل والمناطق</option>
+              <option>أخرى</option>
+            </select>
+          </div>
+          <div class="field"><label>رسالتك</label><textarea required placeholder="اكتب رسالتك هنا…" rows="4"></textarea></div>
+          <button class="btn btn-gold" type="submit">ابعت الرسالة<span class="arrow">←</span></button>
+        </form>
+      </div>
+
+      <!-- Contact info -->
+      <div>
+        <span class="eyebrow">معلومات التواصل</span>
+        <h2 class="display-2" style="margin-top:14px">طرق التواصل المباشر</h2>
+        <ul class="contact-list" style="list-style:none;padding:0;margin:32px 0;display:flex;flex-direction:column;gap:24px" id="c-info-list"></ul>
+
+        <div style="background:var(--paper);border-radius:12px;padding:24px;margin-top:32px">
+          <h4 style="margin:0 0 16px">اطلب عبر واتساب الآن</h4>
+          <p style="color:var(--muted);font-size:14px;margin:0 0 16px">الأسرع والأسهل — ابعتلنا طلبك وهنبعت التأكيد على طول.</p>
+          <a class="btn btn-gold" id="c-wa-btn" href="#" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18" style="margin-left:6px"><path d="M20 3.5A11 11 0 0 0 3 17l-1 5 5-1A11 11 0 1 0 20 3.5z"/></svg>
+            واتساب مباشر<span class="arrow">←</span>
+          </a>
+        </div>
+
+        <div style="margin-top:32px">
+          <h4>ساعات الرد</h4>
+          <p style="color:var(--muted);font-size:14px" id="c-hours-text"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div><div class="brand"><span class="mark">🍕</span><span>كاسا بيتزا<small>EST. 2018 · القاهرة</small></span></div><p class="about" id="c-footer-about"></p></div>
+      <div><h5>تصفّح</h5><ul><li><a href="menu.html">القائمة</a></li><li><a href="pizza.html">🍕 البيتزا</a></li><li><a href="offers.html">العروض</a></li><li><a href="reservations.html">الحجوزات</a></li></ul></div>
+      <div><h5>اتصل بنا</h5><ul id="c-footer-contact"></ul></div>
+      <div><h5>ساعات العمل</h5><ul id="c-footer-hours"></ul></div>
+    </div>
+    <div class="legal"><div>© 2018 — 2026 كاسا بيتزا مصر. جميع الحقوق محفوظة.</div></div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+(function(){
+  const R = window.SAFFRON_DATA.restaurant;
+
+  document.getElementById("c-util-info").innerHTML =
+    `<span>${R.address}</span><span>${R.phoneDisplay}</span>`;
+
+  document.getElementById("c-info-list").innerHTML = `
+    <li style="display:flex;gap:16px;align-items:flex-start">
+      <span style="font-size:24px;min-width:32px">📍</span>
+      <div><strong style="display:block;margin-bottom:4px">العنوان</strong>
+        <span style="color:var(--muted)">${R.addressFull}</span><br>
+        <a href="${R.mapsUrl}" target="_blank" style="color:var(--saffron);font-size:13px;margin-top:4px;display:inline-block">افتح في الخريطة ←</a>
+      </div>
+    </li>
+    <li style="display:flex;gap:16px;align-items:flex-start">
+      <span style="font-size:24px;min-width:32px">📞</span>
+      <div><strong style="display:block;margin-bottom:4px">الهاتف</strong>
+        <a href="tel:${R.phone}" style="color:var(--saffron);font-size:18px;font-weight:600">${R.phoneDisplay}</a>
+      </div>
+    </li>
+    <li style="display:flex;gap:16px;align-items:flex-start">
+      <span style="font-size:24px;min-width:32px">✉️</span>
+      <div><strong style="display:block;margin-bottom:4px">البريد الإلكتروني</strong>
+        <a href="mailto:${R.email}" style="color:var(--saffron)">${R.email}</a>
+      </div>
+    </li>
+    <li style="display:flex;gap:16px;align-items:flex-start">
+      <span style="font-size:24px;min-width:32px">🕐</span>
+      <div><strong style="display:block;margin-bottom:4px">ساعات العمل</strong>
+        <span style="color:var(--muted)">الأحد – الخميس: ${R.hours}<br>الجمعة – السبت: ${R.hoursWeekend}</span>
+      </div>
+    </li>
+  `;
+
+  document.getElementById("c-wa-btn").href =
+    `https://wa.me/${R.whatsapp}?text=${encodeURIComponent("مرحبًا! عايز أطلب من كاسا بيتزا 🍕")}`;
+
+  document.getElementById("c-hours-text").textContent =
+    `بنرد على الرسائل والإيميل من ${R.hours} كل أيام الأسبوع. الرد على واتساب أسرع دايمًا!`;
+
+  document.getElementById("c-footer-about").textContent =
+    `بيتزا إيطالية حقيقية في ${R.address}. منذ ${R.since}.`;
+  document.getElementById("c-footer-contact").innerHTML =
+    `<li>${R.addressFull}</li><li>${R.phoneDisplay}</li><li>${R.email}</li>`;
+  document.getElementById("c-footer-hours").innerHTML =
+    `<li>الأحد – الخميس: ${R.hours}</li><li>الجمعة – السبت: ${R.hoursWeekend}</li>`;
+})();
+</script>
+</body>
+</html>

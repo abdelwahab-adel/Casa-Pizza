@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#100E0B">
+<title>معرض الصور — كاسا بيتزا</title>
+<meta name="description" content="معرض صور مطعم كاسا بيتزا: لقطات من الأطباق، أجواء القاعة، الحديقة الخلفية، والشيف على نار الحطب.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=El+Messiri:wght@400;500;600;700&family=Marhey:wght@500;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23C9A24E'/%3E%3Ctext x='32' y='42' font-family='serif' font-size='34' fill='%23100E0B' text-anchor='middle' font-weight='700'%3Eز%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+
+<div class="utility"><div class="wrap"><div class="info"><span>التجمع الخامس، القاهرة</span><span>010 6830 0432</span></div><div class="info"><a href="reservations.html">احجز طاولتك</a></div></div></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c0 5-4 6-4 10s4 8 4 8 4-4 4-8-4-5-4-10z"/></svg></span><span>كاسا بيتزا<small>EST. 2018 · القاهرة</small></span></a>
+    <nav class="menu">
+      <a href="index.html">الرئيسية</a>
+      <a href="menu.html">القائمة</a>
+      <a href="pizza.html" class="pz">🍕 بيتزا</a>
+      <a href="offers.html">العروض</a>
+      <a href="reservations.html">الحجوزات</a>
+      <a href="location.html">الموقع</a>
+      <a href="qr.html">QR Menu</a>
+      <a href="contact.html">التواصل</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="lang-pill" type="button">EN</button>
+      <a class="btn btn-gold btn-sm" href="reservations.html">احجز الآن<span class="arrow">←</span></a>
+    </div>
+    <button class="burger" aria-label="القائمة"><span></span></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="crumb">الرئيسية · معرض الصور</div>
+    <h1>المكان من الداخل</h1>
+    <p>صور مختارة من جلسات تصوير رسمية ولقطات الضيوف. اضغط على أي صورة لعرضها بحجمها الكامل.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:32px">
+  <div class="wrap">
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:24px;justify-content:center" id="g-tabs">
+      <button class="cat active" data-id="all">الكل</button>
+      <button class="cat" data-id="food">الأطباق</button>
+      <button class="cat" data-id="hall">القاعة</button>
+      <button class="cat" data-id="garden">الحديقة</button>
+      <button class="cat" data-id="kitchen">المطبخ</button>
+    </div>
+
+    <div class="gallery" id="gallery"></div>
+  </div>
+</section>
+
+<div class="lightbox" aria-hidden="true"><button aria-label="إغلاق">×</button><img alt=""></div>
+
+<!-- VIDEO STRIP -->
+<section class="section" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="center js-reveal">
+      <span class="eyebrow center">من كواليس المطبخ</span>
+      <h2 class="display-2" style="margin-top:14px">نقدّم لك المكان بفيديو قصير</h2>
+      <p class="lead" style="margin:18px auto 0">من إعداد فريق المحتوى الداخلي، تصوير بشاشة سينمائية يوثّق يوماً عادياً من ليلة الجمعة.</p>
+    </div>
+    <div class="js-reveal" style="margin-top:36px;border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/9;background:#000;position:relative;max-width:980px;margin-inline:auto">
+      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=85" alt="" style="width:100%;height:100%;object-fit:cover;opacity:.55">
+      <button aria-label="تشغيل" style="position:absolute;inset:0;margin:auto;width:84px;height:84px;border-radius:50%;background:var(--saffron);color:var(--ink);display:grid;place-items:center;box-shadow:0 18px 40px -10px rgba(0,0,0,.5);cursor:pointer">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M8 5v14l11-7z"/></svg>
+      </button>
+      <div style="position:absolute;inset:auto 24px 24px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.4)">
+        <div style="font-family:var(--font-num);font-style:italic;color:var(--saffron);letter-spacing:.1em">2:48 دقيقة</div>
+        <div style="font-family:var(--font-head);font-size:22px;font-weight:600">جولة في القاعة والمطبخ المفتوح</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div><div class="brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c0 5-4 6-4 10s4 8 4 8 4-4 4-8-4-5-4-10z"/></svg></span><span>كاسا بيتزا<small>EST. 2018 · القاهرة</small></span></div>
+        <p class="about">بيتزا إيطالية حقيقية في التجمع الخامس، القاهرة. منذ 2018..</p>
+      </div>
+      <div><h5>تصفّح</h5><ul><li><a href="menu.html">القائمة</a></li><li><a href="offers.html">العروض</a></li><li><a href="reservations.html">الحجوزات</a></li><li><a href="qr.html">قائمة QR</a></li></ul></div>
+      <div><h5>اتصل بنا</h5><ul><li>طريق الأمير تركي الأول، الرياض</li><li>010 6830 0432</li><li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2c5e495f495e5a4d584543425f6c484d5e4d40564d4d4a4d5e4d42025f4d">[email&#160;protected]</a></li></ul></div>
+      <div><h5>ساعات العمل</h5><ul><li>الأحد – الخميس: 12م – 12ص</li><li>الجمعة – السبت: 12م – 1ص</li></ul></div>
+    </div>
+    <div class="legal"><div>© 2018 — 2026 كاسا بيتزا.</div><div>س.ت 12345678</div></div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/cart.js"></script>
+<script>
+  const PHOTOS = [
+    { c:"hall",    s:"a", u:"https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" },
+    { c:"food",    s:"b", u:"https://images.unsplash.com/photo-1547573854-74d2a71d0826" },
+    { c:"food",    s:"c", u:"https://images.unsplash.com/photo-1599487488170-d11ec9c172f0" },
+    { c:"kitchen", s:"d", u:"https://images.unsplash.com/photo-1544025162-d76694265947" },
+    { c:"food",    s:"e", u:"https://images.unsplash.com/photo-1604908554049-9c2d5d0a7a4d" },
+    { c:"food",    s:"f", u:"https://images.unsplash.com/photo-1601381867331-c95cdbc78d51" },
+    { c:"garden",  s:"b", u:"https://images.unsplash.com/photo-1551782450-a2132b4ba21d" },
+    { c:"hall",    s:"c", u:"https://images.unsplash.com/photo-1414235077428-338989a2e8c0" },
+    { c:"food",    s:"d", u:"https://images.unsplash.com/photo-1565557623262-b51c2513a641" },
+    { c:"food",    s:"e", u:"https://images.unsplash.com/photo-1571805341302-f857252d04d6" },
+    { c:"kitchen", s:"f", u:"https://images.unsplash.com/photo-1626700051175-6818013e1d4f" },
+    { c:"garden",  s:"a", u:"https://images.unsplash.com/photo-1544378730-8b5104b59f86" },
+  ];
+
+  const grid = document.getElementById("gallery");
+  let filter = "all";
+  function render(){
+    const list = filter === "all" ? PHOTOS : PHOTOS.filter(p => p.c === filter);
+    grid.innerHTML = list.map(p => `
+      <a class="${p.s}" href="${p.u}?w=1600&q=85"><img src="${p.u}?w=700&q=80" loading="lazy" alt=""></a>
+    `).join("");
+    bindLightbox();
+  }
+  function bindLightbox(){
+    const lb = document.querySelector(".lightbox");
+    grid.querySelectorAll("a").forEach(a => a.addEventListener("click", (e) => {
+      e.preventDefault();
+      lb.querySelector("img").src = a.getAttribute("href");
+      lb.classList.add("open");
+    }));
+    lb.addEventListener("click", (e) => {
+      if(e.target === lb || e.target.closest("button")) lb.classList.remove("open");
+    });
+  }
+  document.querySelectorAll("#g-tabs .cat").forEach(b => b.addEventListener("click", () => {
+    document.querySelectorAll("#g-tabs .cat").forEach(x => x.classList.remove("active"));
+    b.classList.add("active");
+    filter = b.dataset.id;
+    render();
+  }));
+  render();
+</script>
+</body>
+</html>

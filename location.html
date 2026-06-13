@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الموقع — كاسا بيتزا، التجمع الخامس، القاهرة</title>
+<meta name="description" content="كاسا بيتزا في التجمع الخامس، القاهرة الجديدة. 3 شارع البنوك، التجمع الخامس. اتصل: 010 6830 0432">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=El+Messiri:wght@400;500;600;700&family=Marhey:wght@500;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<div class="utility"><div class="wrap"><div class="info"><span id="loc-addr"></span><span id="loc-phone"></span></div><div class="info"><a href="pizza.html">🍕 اطلب بيتزا</a></div></div></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><span class="mark">🍕</span><span>كاسا بيتزا<small>EST. 2018 · القاهرة</small></span></a>
+    <nav class="menu">
+      <a href="index.html">الرئيسية</a>
+      <a href="menu.html">القائمة</a>
+      <a href="pizza.html" class="pz">🍕 بيتزا</a>
+      <a href="offers.html">العروض</a>
+      <a href="reservations.html">الحجوزات</a>
+      <a href="location.html" class="active">الموقع</a>
+      <a href="qr.html">QR Menu</a>
+      <a href="contact.html">التواصل</a>
+    </nav>
+    <div class="nav-cta">
+      <button class="lang-pill" type="button">EN</button>
+      <a class="btn btn-gold btn-sm" href="pizza.html">اطلب بيتزا<span class="arrow">←</span></a>
+    </div>
+    <button class="burger" aria-label="القائمة"><span></span></button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="crumb">الرئيسية · الموقع</div>
+    <h1>ازاي توصلنا</h1>
+    <p id="loc-hero-p"></p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start" class="loc-grid">
+
+      <!-- Map -->
+      <div>
+        <div style="border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.3)">
+          <iframe
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            style="width:100%;height:420px;border:0;display:block"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.5!2d31.4747!3d30.0131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDAwJzQ3LjIiTiAzMcKwMjgnMjkuMCJF!5e0!3m2!1sar!2seg!4v1699000000000"
+          ></iframe>
+        </div>
+        <p class="center" style="margin-top:12px;font-size:13px;color:var(--muted)">
+          إذا لم تظهر الخريطة —
+          <a href="https://maps.google.com/?q=30.0131,31.4747" target="_blank" rel="noopener" style="color:var(--saffron)">افتح في خرائط جوجل</a>
+        </p>
+      </div>
+
+      <!-- Info -->
+      <div>
+        <span class="eyebrow">العنوان والمواصلات</span>
+        <h2 class="display-2" style="margin-top:14px" id="loc-h2"></h2>
+        <div style="margin-top:28px;display:flex;flex-direction:column;gap:20px" id="loc-details"></div>
+        <div style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap">
+          <a class="btn btn-gold" id="loc-maps-btn" href="#" target="_blank" rel="noopener">افتح في خرائط جوجل<span class="arrow">←</span></a>
+          <a class="btn btn-ghost" id="loc-waze-btn" href="#" target="_blank" rel="noopener">افتح في Waze</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Directions -->
+<section class="section" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="center js-reveal">
+      <span class="eyebrow center">من أي اتجاه</span>
+      <h2 class="display-2" style="margin-top:14px">طريقك لكاسا بيتزا</h2>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;margin-top:40px">
+      <div class="js-reveal" style="background:var(--card);padding:28px;border-radius:12px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:42px;height:42px;background:var(--saffron);color:var(--ink);border-radius:50%;display:grid;place-items:center;font-weight:700">N</div>
+          <h4 style="margin:0">من وسط البلد / مدينة نصر</h4>
+        </div>
+        <p style="color:var(--muted);font-size:14px">طريق النصر ← الدائري الأوسطي ← مخرج التجمع الخامس. تقريبًا 25 دقيقة.</p>
+      </div>
+      <div class="js-reveal" style="background:var(--card);padding:28px;border-radius:12px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:42px;height:42px;background:var(--saffron);color:var(--ink);border-radius:50%;display:grid;place-items:center;font-weight:700">W</div>
+          <h4 style="margin:0">من المهندسين / الدقي</h4>
+        </div>
+        <p style="color:var(--muted);font-size:14px">طريق الجيش ← الدائري الإقليمي ← مخرج التجمع. تقريبًا 35 دقيقة.</p>
+      </div>
+      <div class="js-reveal" style="background:var(--card);padding:28px;border-radius:12px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
+          <div style="width:42px;height:42px;background:var(--saffron);color:var(--ink);border-radius:50%;display:grid;place-items:center;font-weight:700">S</div>
+          <h4 style="margin:0">من المعادي / حلوان</h4>
+        </div>
+        <p style="color:var(--muted);font-size:14px">كورنيش النيل شمالًا ← طريق النصر ← الدائري ← التجمع. تقريبًا 30 دقيقة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div><div class="brand"><span class="mark">🍕</span><span>كاسا بيتزا<small>EST. 2018 · القاهرة</small></span></div><p class="about" id="loc-footer-about"></p></div>
+      <div><h5>تصفّح</h5><ul><li><a href="menu.html">القائمة</a></li><li><a href="pizza.html">🍕 البيتزا</a></li><li><a href="offers.html">العروض</a></li><li><a href="reservations.html">الحجوزات</a></li></ul></div>
+      <div><h5>اتصل بنا</h5><ul id="loc-footer-contact"></ul></div>
+      <div><h5>ساعات العمل</h5><ul id="loc-footer-hours"></ul></div>
+    </div>
+    <div class="legal"><div>© 2018 — 2026 كاسا بيتزا مصر. جميع الحقوق محفوظة.</div></div>
+  </div>
+</footer>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script>
+(function(){
+  const R = window.SAFFRON_DATA.restaurant;
+  document.getElementById("loc-addr").textContent = R.address;
+  document.getElementById("loc-phone").textContent = R.phoneDisplay;
+  document.getElementById("loc-hero-p").textContent = `نتواجد في ${R.addressFull}. توصيل سريع لكل التجمع الخامس والقاهرة الجديدة.`;
+  document.getElementById("loc-h2").textContent = R.addressFull;
+  document.getElementById("loc-maps-btn").href = R.mapsUrl;
+  document.getElementById("loc-waze-btn").href = `https://waze.com/ul?ll=${R.lat},${R.lng}&navigate=yes`;
+  document.getElementById("loc-details").innerHTML = `
+    <div style="display:flex;gap:16px;align-items:flex-start">
+      <span style="font-size:22px">📍</span>
+      <div><strong>العنوان</strong><br><span style="color:var(--muted)">${R.addressFull}</span></div>
+    </div>
+    <div style="display:flex;gap:16px;align-items:flex-start">
+      <span style="font-size:22px">📞</span>
+      <div><strong>الهاتف</strong><br><a href="tel:${R.phone}" style="color:var(--saffron)">${R.phoneDisplay}</a></div>
+    </div>
+    <div style="display:flex;gap:16px;align-items:flex-start">
+      <span style="font-size:22px">🕐</span>
+      <div><strong>ساعات العمل</strong><br>
+        <span style="color:var(--muted)">الأحد – الخميس: ${R.hours}<br>الجمعة – السبت: ${R.hoursWeekend}</span>
+      </div>
+    </div>
+    <div style="display:flex;gap:16px;align-items:flex-start">
+      <span style="font-size:22px">🏍️</span>
+      <div><strong>التوصيل</strong><br><span style="color:var(--muted)">35 دقيقة في المتوسط — رسوم 30 ج.م — حد أدنى 150 ج.م</span></div>
+    </div>
+  `;
+  document.getElementById("loc-footer-about").textContent = `بيتزا إيطالية حقيقية في ${R.address}. منذ ${R.since}.`;
+  document.getElementById("loc-footer-contact").innerHTML = `<li>${R.addressFull}</li><li>${R.phoneDisplay}</li><li>${R.email}</li>`;
+  document.getElementById("loc-footer-hours").innerHTML = `<li>الأحد – الخميس: ${R.hours}</li><li>الجمعة – السبت: ${R.hoursWeekend}</li>`;
+})();
+</script>
+</body>
+</html>
