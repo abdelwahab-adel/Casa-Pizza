@@ -252,7 +252,7 @@ window.SAFFRON_DATA = (() => {
       id:"OFR-STU",
       title:"عرض الطلاب",
       desc:"خصم 15% على كل طلب بإثبات بطاقة الطالب. للطلاب من جميع الجامعات المصرية.",
-      img:"https://images.unsplash.com/photo-1571805341302-f857252d04d6?w=900&q=80",
+      img:"assets/download (2).jpg",
       discount:15, code:"STUDENT15",
       endsAt:"2026-12-31T23:59:00",
       terms:"يستلزم إظهار بطاقة الطالب السارية. للطلب في الفرع فقط."
