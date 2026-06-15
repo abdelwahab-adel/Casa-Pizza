@@ -3,50 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>الموقع — كاسا بيتزا، التجمع الخامس، القاهرة</title>
-<meta name="description" content="كاسا بيتزا في التجمع الخامس، القاهرة الجديدة. 3 شارع البنوك، التجمع الخامس. اتصل: 010 6830 0432">
+<title>الموقع والفروع — كاسا بيتزا | Casa Pizza Branches</title>
+<meta name="description" content="كاسا بيتزا في القاهرة: مدينة نصر، الكوربة، الزمالك، وسط البلد. اتصل: 010 6830 0432">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=El+Messiri:wght@400;500;600;700&family=Marhey:wght@500;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/styles.css">
-<style>
-  .loc-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 48px;
-    align-items: start;
-  }
-  @media (max-width: 768px) {
-    .loc-grid {
-      grid-template-columns: 1fr;
-      display: flex;
-      flex-direction: column;
-    }
-    .loc-info-container {
-      order: 1;
-    }
-    .loc-map-container {
-      order: 2;
-      width: 100% !important;
-      margin-top: 32px;
-    }
-    .loc-map-container iframe {
-      height: 350px !important;
-      border-radius: 16px;
-    }
-    .loc-buttons {
-      flex-direction: column;
-    }
-    .loc-buttons .btn {
-      width: 100%;
-      justify-content: center;
-    }
-  }
-</style>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23C9A24E'/%3E%3Ctext x='32' y='42' font-family='serif' font-size='34' fill='%23100E0B' text-anchor='middle' font-weight='700'%3Eز%3C/text%3E%3C/svg%3E">
 </head>
 <body>
 
-<div class="utility"><div class="wrap"><div class="info"><span id="loc-addr"></span><span id="loc-phone"></span></div><div class="info"><a href="pizza.html">🍕 اطلب بيتزا</a></div></div></div>
+<div class="utility">
+  <div class="wrap">
+    <div class="info">
+      <span id="util-addr"></span>
+      <span id="util-phone"></span>
+      <span id="util-hours"></span>
+    </div>
+    <div class="info">
+      <a href="menu.html">🍕 اطلب الآن</a>
+    </div>
+  </div>
+</div>
 
 <header class="nav">
   <div class="wrap">
@@ -57,12 +35,14 @@
       <a href="offers.html">العروض</a>
       <a href="reservations.html">الحجوزات</a>
       <a href="location.html" class="active">الموقع</a>
+      <a href="gallery.html">المعرض</a>
       <a href="qr.html">QR Menu</a>
       <a href="contact.html">التواصل</a>
+      <a href="faq.html">الأسئلة الشائعة</a>
     </nav>
     <div class="nav-cta">
       <button class="lang-pill" type="button">EN</button>
-      <a class="btn btn-gold btn-sm" href="pizza.html">اطلب بيتزا<span class="arrow">←</span></a>
+      <a class="btn btn-gold btn-sm" href="reservations.html">احجز الآن<span class="arrow">←</span></a>
     </div>
     <button class="burger" aria-label="القائمة"><span></span></button>
   </div>
@@ -71,73 +51,126 @@
 <section class="page-hero">
   <div class="wrap">
     <div class="crumb">الرئيسية · الموقع</div>
-    <h1>ازاي توصلنا</h1>
-    <p id="loc-hero-p"></p>
+    <h1>فروعنا في القاهرة</h1>
+    <p>٤ فروع في أرقى مناطق القاهرة. اختر الفرع الأقرب لك أو اطلب توصيل لأي مكان في القاهرة الجديدة.</p>
   </div>
 </section>
 
+<!-- MAIN LOCATION -->
 <section class="section">
   <div class="wrap">
-    <div class="loc-grid">
-      <!-- Info Container (Appears first on mobile) -->
-      <div class="loc-info-container">
+    <div class="center js-reveal" style="margin-bottom:48px">
+      <span class="eyebrow center">موقعنا الرئيسي</span>
+      <h2 class="display-2" style="margin-top:14px">فرع التجمع الخامس</h2>
+    </div>
+    <div class="location-container">
+      <!-- Info Container (Order 1 on mobile) -->
+      <div class="location-info js-reveal">
         <span class="eyebrow">العنوان والمواصلات</span>
-        <h2 class="display-2" style="margin-top:14px" id="loc-h2"></h2>
-        <div style="margin-top:28px;display:flex;flex-direction:column;gap:20px" id="loc-details"></div>
-        <div class="loc-buttons" style="margin-top:32px;display:flex;gap:12px;flex-wrap:wrap">
-          <a class="btn btn-gold" id="loc-maps-btn" href="#" target="_blank" rel="noopener">افتح في خرائط جوجل<span class="arrow">←</span></a>
-          <a class="btn btn-ghost" id="loc-waze-btn" href="#" target="_blank" rel="noopener">افتح في Waze</a>
+        <h2 class="display-3" style="margin-top:14px" id="loc-h2"></h2>
+        <p class="lead" style="margin-top:12px">نتواجد في قلب التجمع الخامس. تقدر تيجي شخصيًا وتجرب البيتزا الساخنة من الفرن أو تستلم طلبك من الفرع.</p>
+
+        <div class="info-block">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <div class="label">العنوان</div>
+            <div class="value" id="loc-address"></div>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+          </div>
+          <div>
+            <div class="label">الهاتف</div>
+            <div class="value"><a id="loc-phone-link" href="#"></a></div>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <div>
+            <div class="label">ساعات العمل</div>
+            <div class="value" id="loc-hours"></div>
+          </div>
+        </div>
+
+        <div class="info-block">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6.5" cy="17" r="2.5"/><circle cx="17.5" cy="17" r="2.5"/><path d="M3 17V8a2 2 0 0 1 2-2h9v11"/><path d="M14 8h4l3 4v5h-3"/></svg>
+          </div>
+          <div>
+            <div class="label">معلومات التوصيل</div>
+            <div class="value">35 دقيقة في المتوسط — رسوم 30 ج.م — حد أدنى 150 ج.م</div>
+          </div>
+        </div>
+
+        <div class="location-buttons">
+          <a class="btn btn-gold" id="loc-maps-btn" href="#" target="_blank" rel="noopener">🗺️ افتح في خرائط جوجل<span class="arrow">←</span></a>
+          <a class="btn btn-ghost" id="loc-waze-btn" href="#" target="_blank" rel="noopener">🚗 افتح في Waze</a>
         </div>
       </div>
 
-      <!-- Map Container (Appears second on mobile) -->
-      <div class="loc-map-container">
-        <div style="border-radius:16px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.1)">
-          <iframe
-            loading="lazy"
-            allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"
-            style="width:100%;height:420px;border:0;display:block"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.5!2d31.4747!3d30.0131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDAwJzQ3LjIiTiAzMcKwMjgnMjkuMCJF!5e0!3m2!1sar!2seg!4v1699000000000"
-          ></iframe>
+      <!-- Map Container (Order 2 on mobile - BELOW content) -->
+      <div class="location-map js-reveal">
+        <div class="map-overlay">
+          <span class="pulse-dot"></span>
+          <span>موقعنا على الخريطة</span>
         </div>
-        <p class="center" style="margin-top:12px;font-size:13px;color:var(--muted)">
-          إذا لم تظهر الخريطة —
-          <a href="https://maps.google.com/?q=30.0131,31.4747" target="_blank" rel="noopener" style="color:var(--saffron)">افتح في خرائط جوجل</a>
-        </p>
+        <iframe
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.5!2d31.4747!3d30.0131!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDAwJzQ3LjIiTiAzMcKwMjgnMjkuMCJF!5e0!3m2!1sar!2seg!4v1699000000000"
+        ></iframe>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Directions -->
-<section class="section" style="background:var(--paper)">
+<!-- ALL BRANCHES -->
+<section class="section" id="branches" style="background:var(--paper)">
+  <div class="wrap">
+    <div class="center js-reveal" style="margin-bottom:48px">
+      <span class="eyebrow center">٤ فروع</span>
+      <h2 class="display-2" style="margin-top:14px">جميع فروعنا</h2>
+    </div>
+    <div class="branch-grid" id="all-branches"></div>
+  </div>
+</section>
+
+<!-- DIRECTIONS -->
+<section class="section">
   <div class="wrap">
     <div class="center js-reveal">
       <span class="eyebrow center">من أي اتجاه</span>
       <h2 class="display-2" style="margin-top:14px">طريقك لكاسا بيتزا</h2>
     </div>
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px;margin-top:40px">
-      <div class="js-reveal" style="background:#fff;padding:28px;border-radius:12px;border:1px solid var(--line)">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-          <div style="width:42px;height:42px;background:var(--saffron);color:var(--ink);border-radius:50%;display:grid;place-items:center;font-weight:700">N</div>
-          <h4 style="margin:0">من وسط البلد / مدينة نصر</h4>
-        </div>
-        <p style="color:var(--muted);font-size:14px">طريق النصر ← الدائري الأوسطي ← مخرج التجمع الخامس. تقريبًا 25 دقيقة.</p>
+      <div class="js-reveal why-card" style="background:#fff">
+        <div class="why-icon" style="width:48px;height:48px"><span style="font-weight:700">N</span></div>
+        <h4>من وسط البلد / مدينة نصر</h4>
+        <p>طريق النصر ← الدائري الأوسطي ← مخرج التجمع الخامس. تقريبًا 25 دقيقة.</p>
       </div>
-      <div class="js-reveal" style="background:#fff;padding:28px;border-radius:12px;border:1px solid var(--line)">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-          <div style="width:42px;height:42px;background:var(--saffron);color:var(--ink);border-radius:50%;display:grid;place-items:center;font-weight:700">W</div>
-          <h4 style="margin:0">من المهندسين / الدقي</h4>
-        </div>
-        <p style="color:var(--muted);font-size:14px">طريق الجيش ← الدائري الإقليمي ← مخرج التجمع. تقريبًا 35 دقيقة.</p>
+      <div class="js-reveal why-card" data-delay="1" style="background:#fff">
+        <div class="why-icon" style="width:48px;height:48px"><span style="font-weight:700">W</span></div>
+        <h4>من المهندسين / الدقي</h4>
+        <p>طريق الجيش ← الدائري الإقليمي ← مخرج التجمع. تقريبًا 35 دقيقة.</p>
       </div>
-      <div class="js-reveal" style="background:#fff;padding:28px;border-radius:12px;border:1px solid var(--line)">
-        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
-          <div style="width:42px;height:42px;background:var(--saffron);color:var(--ink);border-radius:50%;display:grid;place-items:center;font-weight:700">S</div>
-          <h4 style="margin:0">من المعادي / حلوان</h4>
-        </div>
-        <p style="color:var(--muted);font-size:14px">كورنيش النيل شمالًا ← طريق النصر ← الدائري ← التجمع. تقريبًا 30 دقيقة.</p>
+      <div class="js-reveal why-card" data-delay="2" style="background:#fff">
+        <div class="why-icon" style="width:48px;height:48px"><span style="font-weight:700">S</span></div>
+        <h4>من المعادي / حلوان</h4>
+        <p>كورنيش النيل شمالًا ← طريق النصر ← الدائري ← التجمع. تقريبًا 30 دقيقة.</p>
+      </div>
+      <div class="js-reveal why-card" data-delay="3" style="background:#fff">
+        <div class="why-icon" style="width:48px;height:48px"><span style="font-weight:700">E</span></div>
+        <h4>من مصر الجديدة / الكوربة</h4>
+        <p>طريق الأوتوستراد ← الدائري الأوسطي ← مخرج التجمع. تقريبًا 20 دقيقة.</p>
       </div>
     </div>
   </div>
@@ -146,49 +179,122 @@
 <footer>
   <div class="wrap">
     <div class="grid">
-      <div><div class="brand"><span class="mark">🍕</span><span>كاسا بيتزا<small>EST. 2018 · القاهرة</small></span></div><p class="about" id="loc-footer-about"></p></div>
-      <div><h5>تصفّح</h5><ul><li><a href="menu.html">القائمة</a></li><li><a href="pizza.html">🍕 البيتزا</a></li><li><a href="offers.html">العروض</a></li><li><a href="reservations.html">الحجوزات</a></li></ul></div>
-      <div><h5>اتصل بنا</h5><ul id="loc-footer-contact"></ul></div>
-      <div><h5>ساعات العمل</h5><ul id="loc-footer-hours"></ul></div>
+      <div>
+        <div class="brand"><span class="mark">🍕</span><span>كاسا بيتزا<small>EST. 2018 · القاهرة</small></span></div>
+        <p class="about" id="footer-about"></p>
+        <form class="newsletter js-fake-form" data-msg="اشتراك ناجح — هنبعتلك أحدث العروض">
+          <input type="email" required placeholder="اشترك واعرف العروض الجديدة أول بأول">
+          <button type="submit">اشتراك</button>
+        </form>
+        <div class="social">
+          <a href="#" aria-label="إنستغرام"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="واتساب"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.5A11 11 0 0 0 3 17l-1 5 5-1A11 11 0 1 0 20 3.5zm-8 18a9 9 0 0 1-4.6-1.3l-.3-.2-3 .8.8-3-.2-.3A9 9 0 1 1 12 21.5zm5-6.7c-.3-.1-1.7-.8-2-1s-.5-.1-.7.2l-1 1c-.2.2-.3.2-.6.1a7 7 0 0 1-2-1.3 8 8 0 0 1-1.5-1.8c-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.1 0-.3 0-.5l-1-2.3c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4a3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7s1.9 3 4.7 4.1c.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.1-1.4l-.5-.3z"/></svg></a>
+          <a href="#" aria-label="تيك توك"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 6.3a4.8 4.8 0 0 1-3.2-1.2 4.7 4.7 0 0 1-1.4-2.5V2h-3v12.1a2.6 2.6 0 1 1-1.8-2.5V8.4a5.6 5.6 0 1 0 4.8 5.5V8.7a7.7 7.7 0 0 0 4.6 1.5z"/></svg></a>
+          <a href="#" aria-label="فيسبوك"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9V15h-2.5v-3h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 3h-2.3v6.9A10 10 0 0 0 22 12z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h5>تصفّح</h5>
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="menu.html">القائمة</a></li>
+          <li><a href="offers.html">العروض</a></li>
+          <li><a href="reservations.html">الحجوزات</a></li>
+          <li><a href="location.html">الموقع</a></li>
+          <li><a href="gallery.html">المعرض</a></li>
+          <li><a href="contact.html">التواصل</a></li>
+          <li><a href="qr.html">قائمة QR</a></li>
+          <li><a href="faq.html">الأسئلة الشائعة</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>اتصل بنا</h5>
+        <ul id="footer-contact-list"></ul>
+      </div>
+      <div>
+        <h5>ساعات العمل</h5>
+        <ul>
+          <li>الأحد – الخميس: <span id="hours-weekday"></span></li>
+          <li>الجمعة – السبت: <span id="hours-weekend"></span></li>
+          <li>المطبخ يغلق قبل ساعة من الإغلاق</li>
+        </ul>
+      </div>
     </div>
-    <div class="legal"><div>© 2018 — 2026 كاسا بيتزا مصر. جميع الحقوق محفوظة.</div></div>
+    <div class="legal">
+      <div>© 2018 — 2026 كاسا بيتزا مصر. جميع الحقوق محفوظة.</div>
+      <div><a href="#">سياسة الخصوصية</a> · <a href="#">الشروط والأحكام</a> · س.ت 12345678</div>
+    </div>
   </div>
 </footer>
 
 <script src="assets/js/data.js"></script>
 <script src="assets/js/main.js"></script>
+<script src="assets/js/cart.js"></script>
 <script>
 (function(){
   const R = window.SAFFRON_DATA.restaurant;
-  document.getElementById("loc-addr").textContent = R.address;
-  document.getElementById("loc-phone").textContent = R.phoneDisplay;
-  document.getElementById("loc-hero-p").textContent = `نتواجد في ${R.addressFull}. توصيل سريع لكل التجمع الخامس والقاهرة الجديدة.`;
+  document.getElementById("util-addr").innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> ${R.address}`;
+  document.getElementById("util-phone").innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg> ${R.phoneDisplay}`;
+  document.getElementById("util-hours").innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ${R.hours}`;
+
   document.getElementById("loc-h2").textContent = R.addressFull;
+  document.getElementById("loc-address").textContent = R.addressFull;
+  const phoneLink = document.getElementById("loc-phone-link");
+  phoneLink.textContent = R.phoneDisplay;
+  phoneLink.href = `tel:${R.phone}`;
+  document.getElementById("loc-hours").innerHTML = `الأحد – الخميس: ${R.hours}<br>الجمعة – السبت: ${R.hoursWeekend}`;
   document.getElementById("loc-maps-btn").href = R.mapsUrl;
   document.getElementById("loc-waze-btn").href = `https://waze.com/ul?ll=${R.lat},${R.lng}&navigate=yes`;
-  document.getElementById("loc-details").innerHTML = `
-    <div style="display:flex;gap:16px;align-items:flex-start">
-      <span style="font-size:22px">📍</span>
-      <div><strong>العنوان</strong><br><span style="color:var(--muted)">${R.addressFull}</span></div>
-    </div>
-    <div style="display:flex;gap:16px;align-items:flex-start">
-      <span style="font-size:22px">📞</span>
-      <div><strong>الهاتف</strong><br><a href="tel:${R.phone}" style="color:var(--saffron)">${R.phoneDisplay}</a></div>
-    </div>
-    <div style="display:flex;gap:16px;align-items:flex-start">
-      <span style="font-size:22px">🕐</span>
-      <div><strong>ساعات العمل</strong><br>
-        <span style="color:var(--muted)">الأحد – الخميس: ${R.hours}<br>الجمعة – السبت: ${R.hoursWeekend}</span>
+
+  document.getElementById("footer-about").textContent = `بيتزا إيطالية حقيقية في ${R.address}. منذ ${R.since}.`;
+  document.getElementById("footer-contact-list").innerHTML = `<li>${R.addressFull}</li><li><a href="tel:${R.phone}">${R.phoneDisplay}</a></li><li><a href="mailto:${R.email}">${R.email}</a></li>`;
+  document.getElementById("hours-weekday").textContent = R.hours;
+  document.getElementById("hours-weekend").textContent = R.hoursWeekend;
+
+  // All branches
+  const branches = [
+    { name:"مدينة نصر", addr:"شارع عباس العقاد، مدينة نصر", phone:R.phoneDisplay, hours:R.hours, img:"https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=900&q=80" },
+    { name:"الكوربة", addr:"9 شارع الكوربة، مصر الجديدة", phone:R.phoneDisplay, hours:R.hours, img:"https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=900&q=80" },
+    { name:"الزمالك", addr:"26 شارع 26 يوليو، الزمالك", phone:R.phoneDisplay, hours:R.hoursWeekend, img:"https://images.unsplash.com/photo-1559339352-11d035aa65de?w=900&q=80" },
+    { name:"وسط البلد", addr:"3 شارع طلعت حرب، عابدين", phone:R.phoneDisplay, hours:R.hours, img:"https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80" }
+  ];
+  document.getElementById("all-branches").innerHTML = branches.map((b, i) => `
+    <div class="branch-card js-reveal" data-delay="${(i%6)+1}">
+      <div class="ph">
+        <img src="${b.img}" alt="فرع ${b.name}" loading="lazy">
+        <div class="branch-pin">📍 ${b.name}</div>
       </div>
-    </div>
-    <div style="display:flex;gap:16px;align-items:flex-start">
-      <span style="font-size:22px">🏍️</span>
-      <div><strong>التوصيل</strong><br><span style="color:var(--muted)">35 دقيقة في المتوسط — رسوم 30 ج.م — حد أدنى 150 ج.م</span></div>
-    </div>
-  `;
-  document.getElementById("loc-footer-about").textContent = `بيتزا إيطالية حقيقية في ${R.address}. منذ ${R.since}.`;
-  document.getElementById("loc-footer-contact").innerHTML = `<li>${R.addressFull}</li><li>${R.phoneDisplay}</li><li>${R.email}</li>`;
-  document.getElementById("loc-footer-hours").innerHTML = `<li>الأحد – الخميس: ${R.hours}</li><li>الجمعة – السبت: ${R.hoursWeekend}</li>`;
+      <div class="body">
+        <h3>فرع ${b.name}</h3>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>${b.addr}</span>
+        </div>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg>
+          <a href="tel:${R.phone}">${b.phone}</a>
+        </div>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          <span>${b.hours}</span>
+        </div>
+        <div class="actions">
+          <a class="btn btn-gold" href="tel:${R.phone}">📞 اتصل</a>
+          <a class="btn btn-whats" href="https://wa.me/${R.whatsapp}?text=${encodeURIComponent('مرحبًا، أريد الاستفسار عن فرع '+b.name)}" target="_blank" rel="noopener">💬 واتساب</a>
+        </div>
+      </div>
+    </div>`).join("");
+
+  // ---- Re-observe newly added reveals ----
+  if("IntersectionObserver" in window){
+    document.querySelectorAll(".js-reveal:not(.in)").forEach((el, i) => {
+      const io = new IntersectionObserver(entries => entries.forEach(x => {
+        if(x.isIntersecting){ x.target.classList.add("in"); io.disconnect(); }
+      }), {threshold:0.08});
+      if(!el.dataset.delay && i < 6) el.dataset.delay = (i % 6) + 1;
+      io.observe(el);
+    });
+  }
 })();
 </script>
 </body>

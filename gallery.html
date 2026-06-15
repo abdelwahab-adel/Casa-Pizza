@@ -3,9 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#100E0B">
-<title>معرض الصور — كاسا بيتزا</title>
-<meta name="description" content="معرض صور مطعم كاسا بيتزا: لقطات من الأطباق، أجواء القاعة، الحديقة الخلفية، والشيف على نار الحطب.">
+<title>المعرض — كاسا بيتزا | Casa Pizza Gallery</title>
+<meta name="description" content="صور من مطبخ كاسا بيتزا وأطباقنا وأجوائنا. شوف بنفسك جودة بيتزا إيطالية أصلية في القاهرة.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=El+Messiri:wght@400;500;600;700&family=Marhey:wght@500;700&family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -14,24 +13,36 @@
 </head>
 <body>
 
-<div class="utility"><div class="wrap"><div class="info"><span>التجمع الخامس، القاهرة</span><span>010 6830 0432</span></div><div class="info"><a href="reservations.html">احجز طاولتك</a></div></div></div>
+<div class="utility">
+  <div class="wrap">
+    <div class="info">
+      <span id="util-addr"></span>
+      <span id="util-phone"></span>
+      <span id="util-hours"></span>
+    </div>
+    <div class="info">
+      <a href="menu.html">🍕 اطلب الآن</a>
+    </div>
+  </div>
+</div>
 
 <header class="nav">
   <div class="wrap">
-    <a class="brand" href="index.html"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c0 5-4 6-4 10s4 8 4 8 4-4 4-8-4-5-4-10z"/></svg></span><span>كاسا بيتزا<small>EST. 2018 · القاهرة</small></span></a>
+    <a class="brand" href="index.html"><span class="mark">🍕</span><span>كاسا بيتزا<small>EST. 2018 · القاهرة</small></span></a>
     <nav class="menu">
       <a href="index.html">الرئيسية</a>
       <a href="menu.html">القائمة</a>
-
       <a href="offers.html">العروض</a>
       <a href="reservations.html">الحجوزات</a>
       <a href="location.html">الموقع</a>
+      <a href="gallery.html" class="active">المعرض</a>
       <a href="qr.html">QR Menu</a>
       <a href="contact.html">التواصل</a>
+      <a href="faq.html">الأسئلة الشائعة</a>
     </nav>
     <div class="nav-cta">
       <button class="lang-pill" type="button">EN</button>
-      <a class="btn btn-gold btn-sm" href="reservations.html">احجز الآن<span class="arrow">←</span></a>
+      <a class="btn btn-gold btn-sm" href="menu.html">اطلب الآن<span class="arrow">←</span></a>
     </div>
     <button class="burger" aria-label="القائمة"><span></span></button>
   </div>
@@ -39,109 +50,114 @@
 
 <section class="page-hero">
   <div class="wrap">
-    <div class="crumb">الرئيسية · معرض الصور</div>
-    <h1>المكان من الداخل</h1>
-    <p>صور مختارة من جلسات تصوير رسمية ولقطات الضيوف. اضغط على أي صورة لعرضها بحجمها الكامل.</p>
+    <div class="crumb">الرئيسية · المعرض</div>
+    <h1>معرض الصور 📸</h1>
+    <p>صور حقيقية من مطبخنا وأطباقنا وأجوائنا. شوف بنفسك ليه ضيوفنا بيحبوا كاسا بيتزا.</p>
   </div>
 </section>
 
-<section class="section" style="padding-top:32px">
+<section class="section">
   <div class="wrap">
-    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:24px;justify-content:center" id="g-tabs">
-      <button class="cat active" data-id="all">الكل</button>
-      <button class="cat" data-id="food">الأطباق</button>
-      <button class="cat" data-id="hall">القاعة</button>
-      <button class="cat" data-id="garden">الحديقة</button>
-      <button class="cat" data-id="kitchen">المطبخ</button>
-    </div>
+    <div class="gallery" id="gallery">
+      <a class="a" href="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=1400&q=85"><img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=700&q=80" alt="بيتزا مارجريتا" loading="lazy"></a>
+      <a class="b" href="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=1400&q=85"><img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=700&q=80" alt="بيتزا بيبروني" loading="lazy"></a>
+      <a class="c" href="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=1400&q=85"><img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=700&q=80" alt="بيتزا سوبريم" loading="lazy"></a>
+      <a class="d" href="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=1400&q=85"><img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=700&q=80" alt="بيتزا باربكيو" loading="lazy"></a>
+      <a class="e" href="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1400&q=85"><img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=700&q=80" alt="من مطبخ كاسا بيتزا" loading="lazy"></a>
+      <a class="f" href="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=1400&q=85"><img src="https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=700&q=80" alt="بيتزا سي فود" loading="lazy"></a>
 
-    <div class="gallery" id="gallery"></div>
+      <a class="b" href="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=1400&q=85"><img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=700&q=80" alt="عروض" loading="lazy"></a>
+      <a class="a" href="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=1400&q=85"><img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=700&q=80" alt="مكرونة" loading="lazy"></a>
+      <a class="c" href="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=1400&q=85"><img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=700&q=80" alt="باستا" loading="lazy"></a>
+      <a class="d" href="https://images.unsplash.com/photo-1546793665-c74683f339c1?w=1400&q=85"><img src="https://images.unsplash.com/photo-1546793665-c74683f339c1?w=700&q=80" alt="سلطة" loading="lazy"></a>
+      <a class="e" href="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=1400&q=85"><img src="https://images.unsplash.com/photo-1574894709920-11b28e7367e3?w=700&q=80" alt="المقبلات" loading="lazy"></a>
+      <a class="f" href="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=1400&q=85"><img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=700&q=80" alt="تيراميسو" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<!-- FOLLOW US -->
+<section class="section" style="background:var(--ink);color:var(--cream);padding:80px 0">
+  <div class="wrap">
+    <div class="center js-reveal">
+      <span class="eyebrow center" style="color:var(--saffron)">شاركنا صورك</span>
+      <h2 class="display-2" style="margin-top:14px;color:#fff">تابعنا على إنستجرام</h2>
+      <p class="lead center" style="color:rgba(245,239,227,.7);margin:18px auto 0">صوّر أكلك وشاركنا على @casapizza.eg — أفضل الصور بتننشر على صفحتنا 💛</p>
+      <div style="margin-top:32px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+        <a class="btn btn-gold" href="#" target="_blank" rel="noopener">📸 تابعنا على إنستجرام</a>
+        <a class="btn btn-ghost" href="menu.html" style="border-color:rgba(255,255,255,.3);color:#fff">🍕 اطلب الآن</a>
+      </div>
+    </div>
   </div>
 </section>
 
 <div class="lightbox" aria-hidden="true"><button aria-label="إغلاق">×</button><img alt=""></div>
 
-<!-- VIDEO STRIP -->
-<section class="section" style="background:var(--paper)">
-  <div class="wrap">
-    <div class="center js-reveal">
-      <span class="eyebrow center">من كواليس المطبخ</span>
-      <h2 class="display-2" style="margin-top:14px">نقدّم لك المكان بفيديو قصير</h2>
-      <p class="lead" style="margin:18px auto 0">من إعداد فريق المحتوى الداخلي، تصوير بشاشة سينمائية يوثّق يوماً عادياً من ليلة الجمعة.</p>
-    </div>
-    <div class="js-reveal" style="margin-top:36px;border-radius:18px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/9;background:#000;position:relative;max-width:980px;margin-inline:auto">
-      <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1600&q=85" alt="" style="width:100%;height:100%;object-fit:cover;opacity:.55">
-      <button aria-label="تشغيل" style="position:absolute;inset:0;margin:auto;width:84px;height:84px;border-radius:50%;background:var(--saffron);color:var(--ink);display:grid;place-items:center;box-shadow:0 18px 40px -10px rgba(0,0,0,.5);cursor:pointer">
-        <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32"><path d="M8 5v14l11-7z"/></svg>
-      </button>
-      <div style="position:absolute;inset:auto 24px 24px;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.4)">
-        <div style="font-family:var(--font-num);font-style:italic;color:var(--saffron);letter-spacing:.1em">2:48 دقيقة</div>
-        <div style="font-family:var(--font-head);font-size:22px;font-weight:600">جولة في القاعة والمطبخ المفتوح</div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <footer>
   <div class="wrap">
     <div class="grid">
-      <div><div class="brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3c0 5-4 6-4 10s4 8 4 8 4-4 4-8-4-5-4-10z"/></svg></span><span>كاسا بيتزا<small>EST. 2018 · القاهرة</small></span></div>
-        <p class="about">بيتزا إيطالية حقيقية في التجمع الخامس، القاهرة. منذ 2018..</p>
+      <div>
+        <div class="brand"><span class="mark">🍕</span><span>كاسا بيتزا<small>EST. 2018 · القاهرة</small></span></div>
+        <p class="about" id="footer-about"></p>
+        <form class="newsletter js-fake-form" data-msg="اشتراك ناجح — هنبعتلك أحدث العروض">
+          <input type="email" required placeholder="اشترك واعرف العروض الجديدة أول بأول">
+          <button type="submit">اشتراك</button>
+        </form>
+        <div class="social">
+          <a href="#" aria-label="إنستغرام"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="#" aria-label="واتساب"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 3.5A11 11 0 0 0 3 17l-1 5 5-1A11 11 0 1 0 20 3.5zm-8 18a9 9 0 0 1-4.6-1.3l-.3-.2-3 .8.8-3-.2-.3A9 9 0 1 1 12 21.5zm5-6.7c-.3-.1-1.7-.8-2-1s-.5-.1-.7.2l-1 1c-.2.2-.3.2-.6.1a7 7 0 0 1-2-1.3 8 8 0 0 1-1.5-1.8c-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.1 0-.3 0-.5l-1-2.3c-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4a3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7s1.9 3 4.7 4.1c.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.1-1.4l-.5-.3z"/></svg></a>
+          <a href="#" aria-label="تيك توك"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.6 6.3a4.8 4.8 0 0 1-3.2-1.2 4.7 4.7 0 0 1-1.4-2.5V2h-3v12.1a2.6 2.6 0 1 1-1.8-2.5V8.4a5.6 5.6 0 1 0 4.8 5.5V8.7a7.7 7.7 0 0 0 4.6 1.5z"/></svg></a>
+          <a href="#" aria-label="فيسبوك"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9V15h-2.5v-3h2.5V9.8c0-2.5 1.5-3.9 3.7-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.5 3h-2.3v6.9A10 10 0 0 0 22 12z"/></svg></a>
+        </div>
       </div>
-      <div><h5>تصفّح</h5><ul><li><a href="menu.html">القائمة</a></li><li><a href="offers.html">العروض</a></li><li><a href="reservations.html">الحجوزات</a></li><li><a href="qr.html">قائمة QR</a></li></ul></div>
-      <div><h5>اتصل بنا</h5><ul><li>طريق الأمير تركي الأول، الرياض</li><li>010 6830 0432</li><li><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2c5e495f495e5a4d584543425f6c484d5e4d40564d4d4a4d5e4d42025f4d">[email&#160;protected]</a></li></ul></div>
-      <div><h5>ساعات العمل</h5><ul><li>الأحد – الخميس: 12م – 12ص</li><li>الجمعة – السبت: 12م – 1ص</li></ul></div>
+      <div>
+        <h5>تصفّح</h5>
+        <ul>
+          <li><a href="index.html">الرئيسية</a></li>
+          <li><a href="menu.html">القائمة</a></li>
+          <li><a href="offers.html">العروض</a></li>
+          <li><a href="reservations.html">الحجوزات</a></li>
+          <li><a href="location.html">الموقع</a></li>
+          <li><a href="gallery.html">المعرض</a></li>
+          <li><a href="contact.html">التواصل</a></li>
+          <li><a href="qr.html">قائمة QR</a></li>
+          <li><a href="faq.html">الأسئلة الشائعة</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>اتصل بنا</h5>
+        <ul id="footer-contact-list"></ul>
+      </div>
+      <div>
+        <h5>ساعات العمل</h5>
+        <ul>
+          <li>الأحد – الخميس: <span id="hours-weekday"></span></li>
+          <li>الجمعة – السبت: <span id="hours-weekend"></span></li>
+          <li>المطبخ يغلق قبل ساعة من الإغلاق</li>
+        </ul>
+      </div>
     </div>
-    <div class="legal"><div>© 2018 — 2026 كاسا بيتزا.</div><div>س.ت 12345678</div></div>
+    <div class="legal">
+      <div>© 2018 — 2026 كاسا بيتزا مصر. جميع الحقوق محفوظة.</div>
+      <div><a href="#">سياسة الخصوصية</a> · <a href="#">الشروط والأحكام</a> · س.ت 12345678</div>
+    </div>
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="assets/js/data.js"></script>
+<script src="assets/js/data.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/cart.js"></script>
 <script>
-  const PHOTOS = [
-    { c:"hall",    s:"a", u:"https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" },
-    { c:"food",    s:"b", u:"https://images.unsplash.com/photo-1547573854-74d2a71d0826" },
-    { c:"food",    s:"c", u:"https://images.unsplash.com/photo-1599487488170-d11ec9c172f0" },
-    { c:"kitchen", s:"d", u:"https://images.unsplash.com/photo-1544025162-d76694265947" },
-    { c:"food",    s:"e", u:"https://images.unsplash.com/photo-1604908554049-9c2d5d0a7a4d" },
-    { c:"food",    s:"f", u:"https://images.unsplash.com/photo-1601381867331-c95cdbc78d51" },
-    { c:"garden",  s:"b", u:"https://images.unsplash.com/photo-1551782450-a2132b4ba21d" },
-    { c:"hall",    s:"c", u:"https://images.unsplash.com/photo-1414235077428-338989a2e8c0" },
-    { c:"food",    s:"d", u:"https://images.unsplash.com/photo-1565557623262-b51c2513a641" },
-    { c:"food",    s:"e", u:"https://images.unsplash.com/photo-1571805341302-f857252d04d6" },
-    { c:"kitchen", s:"f", u:"https://images.unsplash.com/photo-1626700051175-6818013e1d4f" },
-    { c:"garden",  s:"a", u:"https://images.unsplash.com/photo-1544378730-8b5104b59f86" },
-  ];
-
-  const grid = document.getElementById("gallery");
-  let filter = "all";
-  function render(){
-    const list = filter === "all" ? PHOTOS : PHOTOS.filter(p => p.c === filter);
-    grid.innerHTML = list.map(p => `
-      <a class="${p.s}" href="${p.u}?w=1600&q=85"><img src="${p.u}?w=700&q=80" loading="lazy" alt=""></a>
-    `).join("");
-    bindLightbox();
-  }
-  function bindLightbox(){
-    const lb = document.querySelector(".lightbox");
-    grid.querySelectorAll("a").forEach(a => a.addEventListener("click", (e) => {
-      e.preventDefault();
-      lb.querySelector("img").src = a.getAttribute("href");
-      lb.classList.add("open");
-    }));
-    lb.addEventListener("click", (e) => {
-      if(e.target === lb || e.target.closest("button")) lb.classList.remove("open");
-    });
-  }
-  document.querySelectorAll("#g-tabs .cat").forEach(b => b.addEventListener("click", () => {
-    document.querySelectorAll("#g-tabs .cat").forEach(x => x.classList.remove("active"));
-    b.classList.add("active");
-    filter = b.dataset.id;
-    render();
-  }));
-  render();
+(function(){
+  const R = window.SAFFRON_DATA.restaurant;
+  document.getElementById("util-addr").innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 1 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> ${R.address}`;
+  document.getElementById("util-phone").innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7a2 2 0 0 1 1.72 2.03z"/></svg> ${R.phoneDisplay}`;
+  document.getElementById("util-hours").innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ${R.hours}`;
+  document.getElementById("footer-about").textContent = `بيتزا إيطالية حقيقية في ${R.address}. منذ ${R.since}.`;
+  document.getElementById("footer-contact-list").innerHTML = `<li>${R.addressFull}</li><li><a href="tel:${R.phone}">${R.phoneDisplay}</a></li><li><a href="mailto:${R.email}">${R.email}</a></li>`;
+  document.getElementById("hours-weekday").textContent = R.hours;
+  document.getElementById("hours-weekend").textContent = R.hoursWeekend;
+})();
 </script>
 </body>
 </html>
