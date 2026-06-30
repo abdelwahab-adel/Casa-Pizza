@@ -63,43 +63,14 @@
     <div class="qr-grid">
       <!-- Builder -->
       <div class="qr-builder js-reveal">
-        <span class="eyebrow">مولّد QR</span>
-        <h2 style="margin-top:10px;font-size:24px">أنشئ كوداً جديداً</h2>
-        <p style="color:var(--muted);font-size:14px;margin-top:6px">يُحدَّث المعاينة تلقائياً عند تغيير أي حقل. كل كود يحمل رمز الطاولة في عنوانه.</p>
+        <span class="eyebrow">القائمة QR</span>
+        <h2 style="margin-top:10px;font-size:24px"> قائمة الطعام الكاملة </h2>
+        <p style="color:var(--muted);font-size:14px;margin-top:6px">يُحدَّث المعاينة تلقائياً عند تغيير أي حقل. كل كود يحمل رمز قائمة في عنوانه.</p>
 
-        <div class="field" style="margin-top:18px"><label>رمز الطاولة</label><input id="t-id" type="text" value="T-09" placeholder="مثال: T-09"></div>
-        <div class="field" style="margin-top:14px"><label>وصف الطاولة</label><input id="t-label" type="text" value="طاولة جديدة — جانب الحديقة"></div>
-        <div class="row">
-          <div class="field"><label>اللغة الافتراضية</label>
-            <select id="t-lang">
-              <option value="ar">العربية</option>
-              <option value="en">English</option>
-            </select>
-          </div>
-          <div class="field"><label>قسم القائمة المرتبط</label>
-            <select id="t-cat">
-              <option value="all">القائمة الكاملة</option>
-              <option value="pizza">البيتزا</option>
-              <option value="starters">المقبلات</option>
-              <option value="salads">السلطات</option>
-              <option value="pasta">المكرونة</option>
-              <option value="sides">الإضافات والمرافقات</option>
-              <option value="drinks">المشروبات</option>
-              <option value="sweets">الحلويات</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="actions" style="margin-top:22px;display:flex;gap:10px;flex-wrap:wrap">
-          <button class="btn btn-gold btn-sm" id="dl-png">تحميل PNG<span class="arrow">←</span></button>
-          <button class="btn btn-ghost btn-sm" id="dl-svg">تحميل SVG</button>
-          <button class="btn btn-ghost btn-sm" id="copy-link">انسخ الرابط</button>
-          <button class="btn btn-ghost btn-sm" onclick="window.print()">طباعة البطاقة</button>
-        </div>
-
+    
         <div style="margin-top:24px;padding:16px;background:var(--paper);border-radius:12px;border:1px dashed var(--line)">
           <div class="hint" style="margin-bottom:6px">رابط القائمة المُنشأ:</div>
-          <code id="link-out" style="font-family:var(--font-num);font-size:14px;color:var(--burgundy);word-break:break-all">—</code>
+          <code id="link-out" style="font-family:var(--font-num);font-size:14px;color:var(--burgundy);word-break:break-all"><a href="https://qr1.me-qr.com/ar/data/image-pack/d6z7uh4a">https://qr1.me-qr.com/ar/data/image-pack/d6z7uh4a</a></code>
         </div>
       </div>
 
@@ -113,8 +84,6 @@
           </div>
           <div class="qr-box"><img src="assets/qr.png" alt=""></div>
           <div class="qr-label">امسح الكود لتصفح القائمة</div>
-          <div class="table-no" id="t-id-preview">T-09</div>
-          <div style="font-size:12.5px;color:var(--muted);margin-top:4px" id="t-label-preview">طاولة جديدة — جانب الحديقة</div>
         </div>
         <p class="hint" style="margin-top:16px;text-align:center;max-width:300px">القائمة محدثة لحظياً — أي تعديل من لوحة الإدارة يظهر لجميع الضيوف فوراً دون إعادة طباعة الكود.</p>
       </div>
